@@ -21,7 +21,7 @@ class SceneAutomationConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         })
 
         data_schema = vol.Schema({
-            vol.Required("on_scenes"): vol.All(cv.ensure_list, [on_scene_schema]),
+            vol.Required("on_scenes"): cv.ensure_list(on_scene_schema),
             vol.Required("off_scene"): cv.entity_id,
             vol.Required("binary_sensor"): cv.entity_id,
             vol.Optional("disable_sensor"): cv.entity_id,
@@ -32,7 +32,7 @@ class SceneAutomationConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             vol.Optional("disable_color", default=[255, 0, 0]): vol.All(cv.ensure_list, [cv.positive_int]),
             vol.Optional("already_color", default=[0, 0, 255]): vol.All(cv.ensure_list, [cv.positive_int]),
             vol.Optional("color_duration", default=5): cv.positive_int,
-            vol.Optional("scene_order", default=[]): vol.All(cv.ensure_list, [cv.entity_id]),
+            vol.Optional("scene_order", default=[]): cv.ensure_list(cv.entity_id),
             vol.Optional("off_delay", default=0): cv.positive_int,
             vol.Optional("brighter_event"): cv.string,
             vol.Optional("dimmer_event"): cv.string,
@@ -62,7 +62,7 @@ class SceneAutomationOptionsFlowHandler(config_entries.OptionsFlow):
         })
 
         data_schema = vol.Schema({
-            vol.Required("on_scenes", default=self.config_entry.data.get("on_scenes")): vol.All(cv.ensure_list, [on_scene_schema]),
+            vol.Required("on_scenes", default=self.config_entry.data.get("on_scenes")): cv.ensure_list(on_scene_schema),
             vol.Required("off_scene", default=self.config_entry.data.get("off_scene")): cv.entity_id,
             vol.Required("binary_sensor", default=self.config_entry.data.get("binary_sensor")): cv.entity_id,
             vol.Optional("disable_sensor", default=self.config_entry.data.get("disable_sensor")): cv.entity_id,
@@ -73,7 +73,7 @@ class SceneAutomationOptionsFlowHandler(config_entries.OptionsFlow):
             vol.Optional("disable_color", default=self.config_entry.data.get("disable_color", [255, 0, 0])): vol.All(cv.ensure_list, [cv.positive_int]),
             vol.Optional("already_color", default=self.config_entry.data.get("already_color", [0, 0, 255])): vol.All(cv.ensure_list, [cv.positive_int]),
             vol.Optional("color_duration", default=self.config_entry.data.get("color_duration", 5)): cv.positive_int,
-            vol.Optional("scene_order", default=self.config_entry.data.get("scene_order", [])): vol.All(cv.ensure_list, [cv.entity_id]),
+            vol.Optional("scene_order", default=self.config_entry.data.get("scene_order", [])): cv.ensure_list(cv.entity_id),
             vol.Optional("off_delay", default=self.config_entry.data.get("off_delay", 0)): cv.positive_int,
             vol.Optional("brighter_event", default=self.config_entry.data.get("brighter_event")): cv.string,
             vol.Optional("dimmer_event", default=self.config_entry.data.get("dimmer_event")): cv.string,
