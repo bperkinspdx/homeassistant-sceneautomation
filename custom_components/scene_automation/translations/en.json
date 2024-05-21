@@ -1,0 +1,31 @@
+{
+    "config": {
+      "title": "Scene Automation",
+      "step": {
+        "user": {
+          "title": "Configure Scene Automation",
+          "data": {
+            "on_scenes": "On Scenes (List of time-of-day sensors and scenes)",
+            "off_scene": "Off Scene",
+            "binary_sensor": "Motion Sensor",
+            "disable_sensor": "Disable Sensor (optional)",
+            "enable_event": "Enable Event (optional)",
+            "disable_event": "Disable Event (optional)",
+            "rgb_light": "RGB Light (optional)",
+            "enable_color": "Enable Color (optional)",
+            "disable_color": "Disable Color (optional)",
+            "already_color": "Already Color (optional)",
+            "color_duration": "Color Duration (optional, in seconds)",
+            "scene_order": "Scene Order (optional)",
+            "off_delay": "Off Delay (optional, in seconds)",
+            "brighter_event": "Brighter Event (optional)",
+            "dimmer_event": "Dimmer Event (optional)"
+          }
+        }
+      },
+      "error": {
+        "base": "Something went wrong"
+      }
+    }
+  }
+  

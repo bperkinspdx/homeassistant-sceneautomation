@@ -2,9 +2,10 @@
     "domain": "scene_automation",
     "name": "Scene Automation",
     "version": "0.1",
-    "documentation": "",
+    "documentation": "https://github.com/bperkinspdx/homeassistant-sceneautomation/blob/main/README.md",
     "requirements": [],
     "dependencies": [],
-    "codeowners": ["@bperkinspdx"]
+    "codeowners": ["@bperkinspdx"],
+    "config_flow": true
   }
   

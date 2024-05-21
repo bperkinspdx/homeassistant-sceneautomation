@@ -2,7 +2,6 @@ import logging
 import voluptuous as vol
 
 from homeassistant.helpers import config_validation as cv
-from homeassistant.components.binary_sensor import DOMAIN as BINARY_SENSOR_DOMAIN
 from homeassistant.components.scene import DOMAIN as SCENE_DOMAIN
 from homeassistant.components.light import DOMAIN as LIGHT_DOMAIN, ATTR_RGB_COLOR, ATTR_BRIGHTNESS, SERVICE_TURN_ON
 from homeassistant.const import CONF_ENTITY_ID, EVENT_STATE_CHANGED, CONF_EVENT, STATE_ON, STATE_OFF
