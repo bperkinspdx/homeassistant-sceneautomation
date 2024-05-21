@@ -1,0 +1,10 @@
+{
+    "domain": "scene_automation",
+    "name": "Scene Automation",
+    "version": "0.1",
+    "documentation": "",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": ["@bperkinspdx"]
+  }
+  

@@ -1,0 +1,6 @@
+{
+    "name": "SceneAutomation",
+    "render_readme": false,
+    "zip_release": false,
+    "homeassistant": "2024.5.4"
+  }
